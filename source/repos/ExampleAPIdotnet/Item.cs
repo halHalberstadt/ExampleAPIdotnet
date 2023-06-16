@@ -2,9 +2,9 @@
 {
     public class Item
     {
+        public long Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public long Id { get; set; }
         public double Price { get; set; }
 
         public Item()
@@ -21,6 +21,11 @@
             Price = price;
             Name = name;
             Description = description;
+        }
+
+        public override string ToString()
+        {
+            return $"{Id}:{Name} - ${Price}\n{Description}";
         }
 
     }

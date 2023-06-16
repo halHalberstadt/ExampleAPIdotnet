@@ -5,11 +5,11 @@ namespace ExampleAPIdotnet.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class ItemController : Controller
+    public class UserController : Controller
     {
         // POST: ItemController/Create
-        [HttpPost("~/CreateItem")]
-        public Item CreateItem(Item item)
+        [HttpPost("~/CreateUser")]
+        public Item CreateUser(Item item)
         {
             try
             {
@@ -22,15 +22,15 @@ namespace ExampleAPIdotnet.Controllers
         }
 
         // GET: ItemController/GetItem
-        [HttpPost("~/GetItem")]
-        public Item GetItem(long id)
+        [HttpPost("~/GetUser")]
+        public Item GetUser(long id)
         {
             return new Item();
         }
 
         // POST: ItemController/PutItem
-        [HttpPut("~/PutItem")]
-        public bool EditItem(Item item)
+        [HttpPut("~/PutUser")]
+        public bool EditUser(Item item)
         {
             try
             {
@@ -43,8 +43,8 @@ namespace ExampleAPIdotnet.Controllers
         }
 
         // GET: ItemController/DeleteItem
-        [HttpDelete("~/DeleteItem")]
-        public bool DeleteItem(long id)
+        [HttpDelete("~/DeleteUser")]
+        public bool DeleteUser(long id)
         {
             return false;
         }

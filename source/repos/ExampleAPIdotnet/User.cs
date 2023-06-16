@@ -33,28 +33,92 @@ namespace ExampleAPIdotnet
 
         public Boolean addCard(Card card)
         {
-            return false;
+            if (card == null)
+            {
+                return false;
+
+            }
+
+            Cards.Add(card);
+            return true;
         }
 
         public Boolean removeCard(Card card)
         {
-            return false;
+            if (card == null ||
+                !Cards.Contains(card))
+            {
+                return false;
+
+            }
+
+            Cards.Remove(card);
+            return true;
         }
+
+
 
         public Boolean updateCard(Card card)
         {
-            return false;
+            if (card == null)
+            {
+                return false;
+            }
+
+            bool found = false;
+            for(int i = 0; i < Cards.Count; i++) 
+            {
+                if (Cards[i].Id == card.Id)
+                {
+                    Cards[i] = card;
+                    found = true;
+                }
+            }
+
+            return found;
         }
 
         public Boolean addPurchase(Cart cart)
         {
-            return false;
+            if (cart == null)
+            {
+                return false;
+
+            }
+            Purchases.Add(cart);
+            return true;
         }
 
         public Boolean updatePurchase(Cart cart)
         {
-            return false;
+            if (cart == null)
+            {
+                return false;
+
+            }
+
+            bool found = false;
+            for (int i = 0; i < Purchases.Count; i++)
+            {
+                if (Purchases[i].Id == cart.Id)
+                {
+                    Purchases[i] = cart;
+                    found = true;
+                }
+            }
+
+            return found;
         }
 
+        public Boolean deletePurchase(Cart cart)
+        {
+            if (cart == null)
+            {
+                return false;
+
+            }
+            Purchases.Remove(cart);
+            return true;
+        }
     }
 }

@@ -4,13 +4,13 @@ namespace ExampleAPIdotnet
 {
     public class Cart
     {
-        private long Id { get; set; }
-        private long UserId { get; set; }
-        private DateTime Date { get; set; }
-        private double TotalPrice { get; set; }
-        private double Tax { get; set; }
-        private List<Item> CartItems { get; set; }
-        private Card CardUsed { get; set; }
+        public long Id { get; set; }
+        public long UserId { get; set; }
+        public DateTime Date { get; set; }
+        public double TotalPrice { get; set; }
+        public double Tax { get; set; }
+        public List<Item> CartItems { get; set; }
+        public Card CardUsed { get; set; }
 
         public Cart()
         {

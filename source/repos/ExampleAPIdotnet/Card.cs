@@ -2,11 +2,11 @@
 {
     public class Card
     {
-        private long Id { get; set; }
-        private string NameOnCard { get; set; }
-        private long CardNumber { get; set; }
-        private uint CardExpiration { get; set; } // in the form 0,dd0,mm0y,yyy 
-        private ushort Zipcode { get; set; }
+        public long Id { get; set; }
+        public string NameOnCard { get; set; }
+        public long CardNumber { get; set; }
+        public uint CardExpiration { get; set; } // in the form 0,dd0,mm0y,yyy 
+        public ushort Zipcode { get; set; }
 
         public Card()
         {
