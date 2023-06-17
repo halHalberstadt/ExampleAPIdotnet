@@ -8,7 +8,7 @@ namespace ExampleAPIdotnet.Context
     public class CartContext : DbContext
     {
 
-        public CartContext(DbContextOptions<ItemContext> options) : base(options) {
+        public CartContext(DbContextOptions<CartContext> options) : base(options) {
         }
 
     }
@@ -17,7 +17,7 @@ namespace ExampleAPIdotnet.Context
     {
         public CartContext CreateDbContext(string[] args)
         {
-            var optionsBuilder = new DbContextOptionsBuilder<ItemContext>();
+            var optionsBuilder = new DbContextOptionsBuilder<CartContext>();
             optionsBuilder.UseSqlServer("Data Source=Cart.db");
 
             return new CartContext(optionsBuilder.Options);
